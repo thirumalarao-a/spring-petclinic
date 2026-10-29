@@ -2,6 +2,12 @@ pipeline {
     agent any
 
         stages{
+            
+             stage('declreative'){
+                steps{
+                    git branch: 'feature/2026.01.29', credentialsId: 'Git ACCESS', url: 'https://github.com/thirumalarao-a/Petclinic.git'
+                  }
+                }
 
      stage('checkout clone'){
                 steps{
