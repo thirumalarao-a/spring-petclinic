@@ -1,8 +1,11 @@
 pipeline {
     agent any
+tools {
+    jdk 'JDK17'
+}
 
         stages{
-            
+
              stage('declreative'){
                 steps{
                     git branch: 'feature/2026.01.29', credentialsId: 'Git ACCESS', url: 'https://github.com/thirumalarao-a/Petclinic.git'
